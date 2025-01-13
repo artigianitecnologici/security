@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  kali-vnc:
+    build:
+      context: .
+    container_name: kali-vnc
+    ports:
+      - "5901:5901" # Porta VNC
+      - "6080:6080" # Porta noVNC
+    restart: unless-stopped
+    tty: true
